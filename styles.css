@@ -9,17 +9,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-color: #000000;
   font-family: "Arial", sans-serif;
-  color: #333;
+  color: #939393;
 }
 
 .container {
   text-align: center;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #000000;
+  border: 3px solid #939393;
+  box-shadow: 0 0 50px #939393;
   border-radius: 8px;
   max-width: 400px;
   width: 100%;
@@ -50,7 +50,51 @@ p {
   flex-direction: column;
 }
 
-.button {
+.button1 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.button2 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.button3 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.button4 {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #333;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.button5 {
   display: inline-block;
   margin: 10px 0;
   padding: 10px 20px;
@@ -62,13 +106,62 @@ p {
   transition: background-color 0.3s;
 }
 
-.button:hover {
+.button1:hover {
   background-color: #610000;
-  scale: 1.04;
+  scale: 1.03;
+}
+.button2:hover {
+  background-color: #056100;
+  scale: 1.03;
+}
+.button3:hover {
+  background-color: #001d61;
+  scale: 1.03;
+}
+.button4:hover {
+  background-color: #560061;
+  scale: 1.03;
+}
+.button5:hover {
+  background-color: #614700;
+  scale: 1.03;
 }
 
 
-@media (max-width: 768px) {
+/* Container rəng dəyişmə class-ları */
+.container.instagram {
+  border-color: #ff0000;
+  box-shadow: 0 0 50px #ff0000;
+}
+
+.container.facebook {
+  border-color: #0dff00;
+  box-shadow: 0 0 50px #0dff00;
+}
+
+.container.linkedin {
+  border-color: #004cff;
+  box-shadow: 0 0 50px #004cff;
+}
+
+.container.telegram {
+  border-color: #e100ff;
+  box-shadow: 0 0 50px #e100ff;
+}
+
+.container.whatsapp {
+  border-color: #ffbb00;
+  box-shadow: 0 0 50px #ffbb00;
+}
+
+/* Hover bitəndə smooth transition */
+.container {
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+
+/* @media (max-width: 768px) {
   .container {
     padding: 15px;
   }
@@ -81,8 +174,60 @@ p {
     font-size: 0.9rem;
   }
 
-  .button {
+  .button1, .button2, .button3, .button4, .button5 {
     padding: 8px 16px;
     font-size: 0.9rem;
+  }
+} */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+    height: auto; /* mobil üçün daha stabil olur */
+  }
+
+  .container {
+    padding: 15px;
+    max-width: 95%;
+    border-width: 2px; /* mobil üçün daha incə border */
+    box-shadow: 0 0 25px rgba(255,255,255,0.5); /* daha yumşaq shadow */
+  }
+
+  .profile-picture {
+    width: 80px;
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .links {
+    gap: 5px;
+  }
+
+  .button1,
+  .button2,
+  .button3,
+  .button4,
+  .button5 {
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+  }
+
+  /* Mobil hover real olaraq işləmir, amma klik effekti üçün scale-i yumşaldıram */
+  .button1:hover,
+  .button2:hover,
+  .button3:hover,
+  .button4:hover,
+  .button5:hover {
+    scale: 1.02;
   }
 }
